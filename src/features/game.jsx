@@ -5,6 +5,8 @@ import { GameOverScreen } from "../components/GameOverScreen";
 import { useContext } from "react";
 
 const GameContext = createContext({
+  isMultiplayer: false,
+  setIsMultiplayer: () => {},
   currentGuess: "",
   guessHistory: [],
   secretNumber: 0,
@@ -20,6 +22,7 @@ export const GameProvider = ({ children }) => {
   const [guessHistory, setGuessHistory] = useState([]);
   const [secretNumber, setSecretNumber] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [isMultiplayer, setIsMultiplayer] = useState(false);
 
   // REFACTOR:
   const isNumberValid = () => {
@@ -92,6 +95,8 @@ export const GameProvider = ({ children }) => {
     resetGame,
     isNumberValid,
     handleGuess,
+    isMultiplayer,
+    setIsMultiplayer,
   };
 
   if (gameOver) return <GameOverScreen resetGame={resetGame} />;

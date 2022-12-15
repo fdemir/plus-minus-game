@@ -10,12 +10,15 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-modal": "^3.16.1",
-    "sass": "^1.56.2"
+    "sass": "^1.56.2",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

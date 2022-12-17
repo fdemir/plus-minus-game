@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 const GameContext = createContext({
   isMultiplayer: false,
-  setIsMultiplayer: () => {},
+  setIsMultiplayer: (newVal) => {},
   currentGuess: "",
   guessHistory: [],
   secretNumber: 0,
@@ -82,6 +82,7 @@ export const GameProvider = ({ children }) => {
     setGuessHistory([]);
     setGameOver(false);
     generateNewSecretNumber();
+    setIsMultiplayer(false);
   };
 
   const value = {

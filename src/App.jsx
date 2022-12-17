@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { GameProvider } from "./features/game";
 import Header from "./components/Header";
 import Left from "./components/Left";

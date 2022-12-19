@@ -24,7 +24,6 @@ const GuessHistoryBoard = () => {
           ))}
         </tbody>
       </table>
-      {isMultiplayer && <span className="text-red-500">Rakippp!</span>}
     </div>
   );
 };

@@ -22,6 +22,7 @@ export const RoomProvider = ({ children }) => {
   const joinRoom = (targetRoomId) => {
     socket.current.emit("join-room", targetRoomId);
     setRoomId(targetRoomId);
+    setIsMultiplayer(true);
   };
 
   const leaveRoom = () => {
